@@ -38,7 +38,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,9 +61,122 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="BackRcvResponse.aspx" />
+    <Content Include="Form_6_2_AppConsume.aspx" />
+    <Content Include="Form_6_2_FrontConsume.aspx" />
+    <Content Include="Form_6_3_ConsumeUndo.aspx" />
+    <Content Include="Form_6_4_Refund.aspx" />
+    <Content Include="Form_6_5_Query.aspx" />
+    <Content Include="Form_6_6_FileTransfer.aspx" />
+    <Content Include="Form_6_7_1_AuthDeal_App.aspx" />
+    <Content Include="Form_6_7_1_AuthDeal_Front.aspx" />
+    <Content Include="Form_6_7_2_AuthUndo.aspx" />
+    <Content Include="Form_6_7_3_AuthFinish.aspx" />
+    <Content Include="Form_6_7_4_AutnFinishUndo.aspx" />
+    <Content Include="FrontRcvResponse.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackRcvResponse.aspx.cs">
+      <DependentUpon>BackRcvResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackRcvResponse.aspx.designer.cs">
+      <DependentUpon>BackRcvResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\BigNum.cs" />
+    <Compile Include="Code\CertUtil.cs" />
+    <Compile Include="Code\DemoUtil.cs" />
+    <Compile Include="Code\HttpClient.cs" />
+    <Compile Include="Code\SDKConfig.cs" />
+    <Compile Include="Code\SDKUtil.cs" />
+    <Compile Include="Code\SecurityUtil.cs" />
+    <Compile Include="Form_6_2_AppConsume.aspx.cs">
+      <DependentUpon>Form_6_2_AppConsume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_2_AppConsume.aspx.designer.cs">
+      <DependentUpon>Form_6_2_AppConsume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_2_FrontConsume.aspx.cs">
+      <DependentUpon>Form_6_2_FrontConsume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_2_FrontConsume.aspx.designer.cs">
+      <DependentUpon>Form_6_2_FrontConsume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_3_ConsumeUndo.aspx.cs">
+      <DependentUpon>Form_6_3_ConsumeUndo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_3_ConsumeUndo.aspx.designer.cs">
+      <DependentUpon>Form_6_3_ConsumeUndo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_4_Refund.aspx.cs">
+      <DependentUpon>Form_6_4_Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_4_Refund.aspx.designer.cs">
+      <DependentUpon>Form_6_4_Refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_5_Query.aspx.cs">
+      <DependentUpon>Form_6_5_Query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_5_Query.aspx.designer.cs">
+      <DependentUpon>Form_6_5_Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_6_FileTransfer.aspx.cs">
+      <DependentUpon>Form_6_6_FileTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_6_FileTransfer.aspx.designer.cs">
+      <DependentUpon>Form_6_6_FileTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_7_1_AuthDeal_App.aspx.cs">
+      <DependentUpon>Form_6_7_1_AuthDeal_App.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_7_1_AuthDeal_App.aspx.designer.cs">
+      <DependentUpon>Form_6_7_1_AuthDeal_App.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_7_1_AuthDeal_Front.aspx.cs">
+      <DependentUpon>Form_6_7_1_AuthDeal_Front.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_7_1_AuthDeal_Front.aspx.designer.cs">
+      <DependentUpon>Form_6_7_1_AuthDeal_Front.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_7_2_AuthUndo.aspx.cs">
+      <DependentUpon>Form_6_7_2_AuthUndo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_7_2_AuthUndo.aspx.designer.cs">
+      <DependentUpon>Form_6_7_2_AuthUndo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_7_3_AuthFinish.aspx.cs">
+      <DependentUpon>Form_6_7_3_AuthFinish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_7_3_AuthFinish.aspx.designer.cs">
+      <DependentUpon>Form_6_7_3_AuthFinish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form_6_7_4_AutnFinishUndo.aspx.cs">
+      <DependentUpon>Form_6_7_4_AutnFinishUndo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form_6_7_4_AutnFinishUndo.aspx.designer.cs">
+      <DependentUpon>Form_6_7_4_AutnFinishUndo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontRcvResponse.aspx.cs">
+      <DependentUpon>FrontRcvResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontRcvResponse.aspx.designer.cs">
+      <DependentUpon>FrontRcvResponse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +186,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="文件\PM_700000000000001_acp.pfx" />
+    <Content Include="文件\UpopRsaCert.cer" />
+    <Content Include="文件\verify_sign_acp.cer" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
