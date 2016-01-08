@@ -38,7 +38,7 @@
     param["signMethod"]= "01";//签名方法
     param["channelType"] = "08";//渠道类型，07-PC，08-手机
     param["accessType"] = "0";//接入类型
-    param["merId"] = "888888888888888";//商户号，请改成自己的商户号
+    param["merId"] = Convert.ToString(ConfigurationManager.AppSettings["BankPayID"]);//商户号，请改成自己的商户号
     param["orderId"] = orderID;//商户订单号，可任意修改
     param["txnTime"] = DateTime.Now.ToString("yyyyMMddHHmmss");//订单发送时间
     param["txnAmt"] = "1";//交易金额，单位分

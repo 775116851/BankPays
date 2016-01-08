@@ -37,7 +37,7 @@
     param["accessType"] = "0";//接入类型
     param["channelType"] = "07";//渠道类型
     param["orderId"] = orderID;//商户订单号，重新产生，不同于原消费
-    param["merId"] = "";//商户代码，请改成自己的测试商户号
+    param["merId"] = Convert.ToString(ConfigurationManager.AppSettings["BankPayID"]);//商户代码，请改成自己的测试商户号
     param["origQryId"] = "201303071540145467132";//原消费的queryId，可以从查询接口或者通知接口中获取
     param["txnTime"] = DateTime.Now.ToString("yyyyMMddHHmmss");//订单发送时间，重新产生，不同于原消费
     param["txnAmt"] = "1";//交易金额，消费撤销时需和原消费一致

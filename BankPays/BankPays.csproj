@@ -195,7 +195,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="文件\700000000000001_acp.p12" />
+    <Content Include="文件\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="文件\ReadMe.txt" />
     <Content Include="文件\verify_sign_acp.cer" />
+    <Content Include="文件\平台接入接口规范-第5部分-附录v1.5.pdf" />
+    <Content Include="文件\平台接口规范-第3部分-文件接口v1.5.pdf" />
+    <Content Include="文件\手机网页支付产品接口规范v1.5.pdf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
