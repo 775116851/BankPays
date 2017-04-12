@@ -30,9 +30,9 @@
     param["bizType"] = "000000";//业务类型
     param["accessType"] = "0";//接入类型
     param["channelType"] = "07";//渠道类型
-    param["orderId"] = "20150211215817604";//请修改被查询的交易的订单号
+    param["orderId"] = "1170222104210646";//请修改被查询的交易的订单号
     param["merId"] = Convert.ToString(ConfigurationManager.AppSettings["BankPayID"]);//商户代码，请改成自己的测试商户号
-    param["txnTime"] = "20150211215817";//请修改被查询的交易的订单发送时间
+    param["txnTime"] = "20170222104210";//请修改被查询的交易的订单发送时间
 
     SDKUtil.Sign(param, Encoding.UTF8);  // 签名
     Response.Write("\n" + "请求报文=[" + SDKUtil.PrintDictionaryToString(param) + "]\n");
